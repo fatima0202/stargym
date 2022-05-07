@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StarGYM</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&amp;display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link id="mystyle" rel="stylesheet" type="text/css" href="dark.css">
+    <link id="mystyle" rel="stylesheet" type="text/css" href="light.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+  <script>
+    var setTheme = localStorage.getItem('theme')
+    console.log('theme',setTheme)
+
+    if (setTheme == null){
+      swapStyle('dark.css')
+    }else{
+      swapStyle(setTheme)
+    }
+
+    function swapStyle(sheet){
+      document.getElementById('mystyle').href =sheet
+      localStorage.setItem('theme',sheet)
+    }
+  </script>
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        body{
+            background-color: #53A5E2;
+            color: white;
+            font-family: Tajawal;
+            text-align: center;
+        }
+        .bg{
+       text-align: center;
+       position: relative;
+       background: none;
+       padding: 30px;
+      }
+      .bg:after{
+        content: "";
+        display: block;
+        position: absolute;
+        top:0;
+        left:0;
+        background-image: url(https://images.pexels.com/photos/2294361/pexels-photo-2294361.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        opacity: 0.7;
+        z-index: -1;
+      }
+      #serves{
+        background-color: #3487E1;
+      }
+      .glyphicon{
+        font-size: 40px;
+      }
+      .btn{
+        background-color: #7EE6DE;
+        color: #080B35;
+      }
+      .btn:hover{
+        background-color: #080B35;
+      }
+      #team{
+        background-color: #3170DE;
+      }
+      .teamimg{
+        border-radius: 50%;
+        border: 5px solid white;
+        box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) ;
+      }
+      .fa{
+        font-size: 15px;
+        background-color: #7EE6DE;
+        color: #080B35;
+        border-radius: 50%;
+        width: 25px;
+        height: 25px;
+        padding-top: 5px;
+      }
+      #portfoilo{
+       background-color: #033AA8; 
+      }
+      .portfoilo .portfoilo-item{
+        cursor: pointer;
+        position: relative;
+        display: block;
+        max-width: 350px;
+        height: 300px;
+        border-radius: 2%;
+        overflow: hidden;
+        box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) ;
+        margin-bottom: 30px;
+      }
+      .img-fluid{
+        object-fit: cover;
+        min-width: 350px;
+        height: 300px;
+      }
+      .portfoilo .portfoilo-item .portfoilo-item-caption{
+       position: absolute;
+       top: 0;
+       left: 0;
+       transition: all 0.2s ease-in-out;
+       opacity: 0;
+       background-color: #3487E1; 
+
+      }
+      .portfoilo .portfoilo-item .portfoilo-item-caption:hover{
+        opacity: 0.8;
+      }
+      .portfoilo .portfoilo-item .portfoilo-item-caption .portfoilo-item-caption-content{
+        font-size:25px ;
+        padding: 110px;
+      }
+      #pricetable{
+        background-color: #092B9C;
+        padding-bottom: 30px;
+
+      }
+      .pricecontent{
+        background-color: white;
+        box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) ;
+      }
+      .headprice{
+        background-color:#2DA0ED;
+      }
+      .headprice:hover{
+        background-color:#7EE6DE;
+      }
+      .head span{
+        color:white;
+        font-size: 20px;
+        font-weight: 500;
+      }
+      .featurelist ul{
+        width: 100%;
+      }
+      .featurelist ul li{
+        color: black;
+        margin: 0 35px;
+        padding: 20px 15px;
+        width: 100%;
+      }
+      .featurelist ul li span{
+        color: #414141;
+      }
+      .featurelist ul:hover{
+        background-color:#7EE6DE;
+      }
+      .price{
+        color: #3E200A;
+        font-size: 30px;
+        font-weight: 500;
+        display: block;
+        text-align: center;
+      }
+      .featurelist{
+        text-align: center;
+        font-size: 15px;
+        font-weight: 400;
+      }
+      .darkfooter{
+        text-align: center;
+        background-color: #0E1946;
+      }
+
+
+
+    </style>
+    <div class="container">
+        <nav class="navbar navbar-expand-sm navbar-light">
+            <a calss="navbar-brand" href="#">
+              <img src="https://logodix.com/logo/372367.png" alt="bootstrap" width="25" height="30" class="d-inline-block align-top">
+            </a>
+     
+           <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#toggleMobileMenu"
+              aria-controls="toggleMobileMenu" 
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+           </button>
+              <div class="collapse navbar-collapse" id="toggleMobileMenu">
+            <ul class ="navbar-nav ms-auto text-center">
+              <li>
+              <a class="nav-link" href="#">home page</a>
+               </li>
+              <li>
+              <a class="nav-link" href="#team">our team </a>
+              </li>
+              <li>
+              <a class="nav-link" href="#portfoilo"> our plan</a>
+              </li> 
+            </ul>
+          </div>
+            <a onclick="swapStyle('dark.css')" style="padding: 5px; color: white; background-color: #53A5E2; font-size: 20px ;" class="fa fa-moon-o"></a>
+            <a onclick="swapStyle('light.css')" style="padding: 5px; color: white; background-color: #53A5E2; font-size: 20px ;" class="fa fa-sun-o" ></a>  
+           <a class="btn btn-danger" href="login.html" >log in  </a>
+         </nav>
+       </div>
+
+       <div class="bg pt-6">
+        <h1>Welcom to STAR GTM</h1>
+        <p>this is the first place to change your life to WhHAT YOU WANTED TO BE</p>
+        <a class="btn btn-danger" href="#portfoilo" role="button">see our serves </a>
+       </div>
+
+       <div id="serves" >
+        <div class="container">
+          <div class="text-center my-5">
+            <h2> Our serves </h2>
+            <p style="padding-bottom: 20px;">some of our serves </p>
+           <div class="row">
+             <div class="col-md-4">
+                <i class="glyphicon glyphicon-ok-circle"></i>
+                <h3>helth check up </h3>
+                <p> full helth check up so we can choose the best workout for you </p>
+             </div> 
+             <div class="col-md-4">
+               <i class="glyphicon glyphicon-user"></i>
+               <h3>personel trainer </h3>
+               <p> we have one of most qualified trainers in the world</p>
+             </div> 
+             <div class="col-md-4">
+               <i class="glyphicon glyphicon-th"></i>
+               <h3>trinning plans</h3>
+               <p> variety of trinning plans to see what sutits you best  </p>
+             </div> 
+           </div>
+         </div>
+        </div>
+       </div>
+
+       <div id="team" >
+       <div class="container">
+        <div class="text-center my-5">
+          <h2> Our team </h2>
+          <p style="padding-bottom: 20px;"> one of our lead trainer  </p>
+         <div class="row">
+           <div class="col-md-4">
+              <img class="teamimg" src="https://www.svgrepo.com/show/169986/avatar.svg" width="80" height="80">
+              <h3>jenffer nik</h3>
+              <p>a golden medul wainner in the Olympic </p>
+              <div class="social">
+                <a href="#" class="fa fa-facebook"></a> 
+                <a href="#" class="fa fa-linkedin"></a> 
+              </div>
+           </div> 
+           <div class="col-md-4">
+             <img class="teamimg" src="https://www.svgrepo.com/show/384683/account-avatar-profile-user-8.svg" width="80" height="80">
+             <h3>tony wate</h3>
+             <p>bodybulding wainner </p>
+             <div class="social">
+               <a href="#" class="fa fa-facebook"></a> 
+               <a href="#" class="fa fa-linkedin"></a> 
+             </div>
+           </div> 
+           <div class="col-md-4">
+             <img class="teamimg" src="https://www.svgrepo.com/show/384670/account-avatar-profile-user.svg" width="80" height="80">
+             <h3>jake house</h3>
+             <p>the best yoga trinner in the world </p>
+             <div class="social">
+               <a href="#" class="fa fa-facebook"></a> 
+               <a href="#" class="fa fa-linkedin"></a> 
+             </div>
+           </div> 
+         </div>
+       </div>
+      </div>
+      </div>
+
+      <div id="portfoilo"  class="portfoilo">
+        <div class="container">
+          <h2 class="text-center" style="padding-bottom: 20px;"> Our trinning </h2>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="portfoilo-item">
+                <div class="portfoilo-item-caption align:item-center justify-content-center h-100 w-100">
+                  <div class="portfoilo-item-caption-content text-center text-white">
+                    <i class="fa fa-plus"></i>
+                    <h4>Weight lifting </h4>
+                  </div>
+                </div>
+                <img class="img-fluid" src="https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" >
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="portfoilo-item">
+                <div class="portfoilo-item-caption align:item-center justify-content-center h-100 w-100">
+                  <div class="portfoilo-item-caption-content text-center text-white">
+                    <i class="fa fa-plus"></i>
+                    <h4>Yoga </h4>
+                  </div>
+                </div>
+                <img class="img-fluid" src="https://images.pexels.com/photos/3930990/pexels-photo-3930990.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" >
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="portfoilo-item">
+                <div class="portfoilo-item-caption align:item-center justify-content-center h-100 w-100">
+                  <div class="portfoilo-item-caption-content text-center text-white">
+                    <i class="fa fa-plus"></i>
+                    <h4>cardio </h4>
+                  </div>
+                </div>
+                <img class="img-fluid" src="https://images.pexels.com/photos/416778/pexels-photo-416778.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" >
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="portfoilo-item">
+                <div class="portfoilo-item-caption align:item-center justify-content-center h-100 w-100">
+                  <div class="portfoilo-item-caption-content text-center text-white">
+                    <i class="fa fa-plus"></i>
+                    <h4>diet </h4>
+                  </div>
+                </div>
+                <img class="img-fluid" src="https://images.pexels.com/photos/3985872/pexels-photo-3985872.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" >
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="portfoilo-item">
+                <div class="portfoilo-item-caption align:item-center justify-content-center h-100 w-100">
+                  <div class="portfoilo-item-caption-content text-center text-white">
+                    <i class="fa fa-plus"></i>
+                    <h4>swmming pool </h4>
+                  </div>
+                </div>
+                <img class="img-fluid" src="https://images.pexels.com/photos/863988/pexels-photo-863988.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" >
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="portfoilo-item">
+                <div class="portfoilo-item-caption align:item-center justify-content-center h-100 w-100">
+                  <div class="portfoilo-item-caption-content text-center text-white">
+                    <i class="fa fa-plus"></i>
+                    <h4>boxing </h4>
+                  </div>
+                </div>
+                <img class="img-fluid" src="https://images.pexels.com/photos/163403/box-sport-men-training-163403.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="pricetable" style="margin-bottom: 30px;">
+        <div class="container text-center">
+          <h2> Price table</h2>
+          <div class="row">
+            <div class="col-md-4  pricecard">
+              <div class="pricecontent">
+                <div class="headprice">
+                  <div class="headcontent">
+                    <div class="headbg"></div>
+                    <div class="head">
+                      <span>cardio</span>
+                    </div>
+                  </div>
+                  <div class="pricetag">
+                    <span class="price">
+                      <span class="month">a month/</span>
+                      <span class="sign">$</span>
+                      <span class="currency">45</span>
+                      <span class="cent">.99</span>
+                    </span>
+                  </div> 
+                </div>
+                <div class="featurelist">
+                  <ul>
+                    <li><span>2GB</span>running</li>
+                    <li><span>2GB</span>النطاق</li>
+                    <li><span>2GB</span>النطاق</li>
+                    <li><span>2GB</span>النطاق</li>
+                    <li><span>2GB</span>النطاق</li>
+                  </ul>
+                </div>
+                <a class="btn btn-danger" href="login.html" style="margin-bottom: 10px;">join us now </a>
+              </div>
+            </div>
+            <div class="col-md-4  pricecard">
+              <div class="pricecontent">
+                <div class="headprice">
+                  <div class="headcontent">
+                    <div class="headbg"></div>
+                    <div class="head">
+                      <span>yoga</span>
+                    </div>
+                  </div>
+                  <div class="pricetag ">
+                    <span class="price">
+                      <span class="month">a month/</span>
+                      <span class="sign">$</span>
+                      <span class="currency">45</span>
+                      <span class="cent">.99</span>
+                    </span>
+                  </div> 
+                </div>
+                <div class="featurelist">
+                  <ul>
+                    <li><span>2GB</span>النطاق</li>
+                    <li><span>2GB</span>النطاق</li>
+                    <li><span>2GB</span>النطاق</li>
+                    <li><span>2GB</span>النطاق</li>
+                    <li><span>2GB</span>النطاق</li>
+                  </ul>
+                </div>
+                <a class="btn btn-danger" href="login.html" style="margin-bottom: 10px;"> join us now</a>
+              </div>
+            </div>
+            <div class="col-md-4  pricecard">
+              <div class="pricecontent">
+                <div class="headprice">
+                  <div class="headcontent">
+                    <div class="headbg"></div>
+                    <div class="head">
+                      <span>bodybulding</span>
+                    </div>
+                  </div>
+                  <div class="pricetag ">
+                    <span class="price">
+                      <span class="month">a month/</span>
+                      <span class="sign">$</span>
+                      <span class="currency">45</span>
+                      <span class="cent">.99</span>
+                    </span>
+                  </div> 
+                </div>
+                <div class="featurelist ">
+                  <ul>
+                    <li><span>2GB</span>النطاق</li>
+                    <li><span>2GB</span>النطاق</li>
+                    <li><span>2GB</span>النطاق</li>
+                    <li><span>2GB</span>النطاق</li>
+                    <li><span>2GB</span>النطاق</li>
+                  </ul>
+                </div>
+                <a class="btn btn-danger " href="login.html" style="margin-bottom: 10px;"> join us now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="darkfooter" >
+        <footer>
+          <div class="container " >
+             <h1 style="padding: 20px;">join us and start a new HELTHY life</h1>
+            <div class=" social text-center" >
+               <a href="#" class="fa fa-facebook"></a> 
+                <a href="#" class="fa fa-linkedin"></a> 
+                <a href="#" class="fa fa-facebook"></a> 
+                <a href="#" class="fa fa-linkedin"></a>
+                <p class="copuright style="margin-top: 10px;>follow us on social media  </p>
+            </div>
+          </div>
+        </footer>
+      </div>
+      
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+</body>
+</html>

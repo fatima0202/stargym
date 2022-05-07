@@ -1,0 +1,27 @@
+body{
+    background-color: #04031C !important;
+}
+a{
+    color: white !important;
+
+}
+#serves{
+background-color: #080B35 !important;
+}
+#team{
+background-color: #0E1946 !important;
+}
+
+#portfoilo{
+background-color: #152A5D !important; 
+}
+
+#pricetable{
+background-color: #152A5D !important;
+
+}
+.pricecontent{
+background-color: white;
+box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) ;
+}
+

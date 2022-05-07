@@ -1,0 +1,146 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #53A5E2;
+    color: white;
+    font-family: Tajawal;
+    text-align: center;
+}
+.bg{
+text-align: center;
+position: relative;
+background: none;
+padding: 30px;
+}
+.bg:after{
+content: "";
+display: block;
+position: absolute;
+top:0;
+left:0;
+background-image: url(https://images.pexels.com/photos/2294361/pexels-photo-2294361.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+background-position: center;
+background-size: cover;
+width: 100%;
+height: 100%;
+opacity: 0.7;
+z-index: -1;
+}
+#serves{
+background-color: #3487E1;
+}
+.glyphicon{
+font-size: 40px;
+}
+.btn{
+background-color: #7EE6DE;
+color: #080B35;
+}
+.btn:hover{
+background-color: #080B35;
+}
+#team{
+background-color: #3170DE;
+}
+.teamimg{
+border-radius: 50%;
+border: 5px solid white;
+box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) ;
+}
+.fa{
+font-size: 15px;
+background-color: #7EE6DE;
+color: #080B35;
+border-radius: 50%;
+width: 25px;
+height: 25px;
+padding-top: 5px;
+}
+#portfoilo{
+background-color: #033AA8; 
+}
+.portfoilo .portfoilo-item{
+cursor: pointer;
+position: relative;
+display: block;
+max-width: 350px;
+height: 300px;
+border-radius: 2%;
+overflow: hidden;
+box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) ;
+margin-bottom: 30px;
+}
+.img-fluid{
+object-fit: cover;
+min-width: 350px;
+height: 300px;
+}
+.portfoilo .portfoilo-item .portfoilo-item-caption{
+position: absolute;
+top: 0;
+left: 0;
+transition: all 0.2s ease-in-out;
+opacity: 0;
+background-color: #3487E1; 
+
+}
+.portfoilo .portfoilo-item .portfoilo-item-caption:hover{
+opacity: 0.8;
+}
+.portfoilo .portfoilo-item .portfoilo-item-caption .portfoilo-item-caption-content{
+font-size:25px ;
+padding: 110px;
+}
+#pricetable{
+background-color: #092B9C;
+padding-bottom: 30px;
+
+}
+.pricecontent{
+background-color: white;
+box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) ;
+}
+.headprice{
+background-color:#2DA0ED;
+}
+.headprice:hover{
+background-color:#7EE6DE;
+}
+.head span{
+color:white;
+font-size: 20px;
+font-weight: 500;
+}
+.featurelist ul{
+width: 100%;
+}
+.featurelist ul li{
+color: black;
+margin: 0 35px;
+padding: 20px 15px;
+width: 100%;
+}
+.featurelist ul li span{
+color: #414141;
+}
+.featurelist ul:hover{
+background-color:#7EE6DE;
+}
+.price{
+color: #3E200A;
+font-size: 30px;
+font-weight: 500;
+display: block;
+text-align: center;
+}
+.featurelist{
+text-align: center;
+font-size: 15px;
+font-weight: 400;
+}
+.darkfooter{
+text-align: center;
+background-color: #0E1946;
+}
+
